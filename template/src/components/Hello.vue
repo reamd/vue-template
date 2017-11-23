@@ -2,7 +2,7 @@
     <div class="hello">
         <h4>父组件传递过来的值：</h4>
         <ul>
-            <li>{{message}}</li>
+            <li><span v-text="message"></span></li>
             <li>
                 <button @click="sendParentMsg">向父组件传值</button>
             </li>

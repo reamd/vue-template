@@ -1,10 +1,11 @@
 // 存储全局的actions事件
-import http from 'api/http'
+// import {UPDATE_SCHDULE} from 'mutation-type'
 
-export const getUserInfo = ({ commit }) => {
-    console.log(http)
-    http.get('user/userInfos').end((err, res) => {
-        console.log(err)
-        console.log(res)
-    })
+export const UPDATE_SCHDULE = ({commit, state}, info) => {
+    // 模仿异步提交
+    console.log(state.schedule.info)
+    setTimeout(function () {
+        commit('UPDATE_SCHDULE', info)
+    }, 1000)
 }
+

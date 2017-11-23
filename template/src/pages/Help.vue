@@ -18,16 +18,22 @@
         <ul>
             <li>改变state:<input @change="changeData"/></li>
             <li>
-                state: {{schedule.info}}
+                state: <span v-text="schedule.info"></span>
             </li>
             <li>
-                getter: {{getNewSchedule}}
+                getter: <span v-text="getNewSchedule"></span>
             </li>
+        </ul>
+
+        <h3>4. ajax</h3>
+        <ul class="ajax">
+            <li><button @click="getTaskList">获取task信息</button></li>
         </ul>
     </div>
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this page only -->
+<!--<style scoped languge='scss'>-->
 <style scoped>
     .link {
         display: block;
@@ -41,11 +47,12 @@
     li {
         margin-top: 30px;
     }
-</style>-->
+</style>
 
 <script>
     import {mapState, mapGetters, mapActions} from 'vuex'
     import components from 'components'
+    import http from '../api/http'
 
     /*
         1.watch擅长处理的场景：一个数据影响多个数据
@@ -111,6 +118,16 @@
             jumpTest () {
                 this.$router.push({
                     path: 'test'
+                })
+            },
+            getTaskList () {
+                http.get('http://localhost:3000/GetClassTaskList', {
+                    taskId: '123'
+                })
+                .then((res) => {
+                    console.log(res.body)
+                }, (err) => {
+                    console.log(err)
                 })
             }
         },

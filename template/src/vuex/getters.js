@@ -1,3 +1,3 @@
-export const userInfo = state => {
-    return state.userInfo
+export const getNewSchedule = state => {
+    return state.schedule.date + ' 09:00'
 }

@@ -27,6 +27,19 @@ npm run build --report
 
 ```
 
+## example
+demo中展示了以下用法：
+
+- 父子组件间传值
+
+- vue路由
+
+- ajax请求
+
+- vuex的使用
+
+- vue组件的使用
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
