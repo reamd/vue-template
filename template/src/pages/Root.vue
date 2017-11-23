@@ -1,6 +1,5 @@
 <template>
     <div class="wrap">
-        Root
         <router-view></router-view>
     </div>
 </template>
@@ -15,6 +14,11 @@
         store,
         filters,
         name: 'root',
-        components: {}
+        components: {},
+        created () {
+            this.$router.replace({
+                path: 'help'
+            })
+        }
     }
 </script>

@@ -10,6 +10,10 @@ const router = new Router({
         {
             path: '/help',
             component: Pages.Help
+        },
+        {
+            path: '/test',
+            component: Pages.Test
         }
     ],
     mode: 'history'

@@ -1,6 +1,47 @@
 # vue_template
 
-> A Vue.js project
+> A Vue.js project @reamd
+
+## Development process (it depends on your circumstance)
+
+``` flow
+A. page development proccess:
+
+# 1rt step
+router index.js
+routers:[]
+
+# 2rt step
+pages index.js
+
+# 3rd step
+according to new page.xxx of index.js create page(if need vuex?)
+
+# 4th step
+if need components
+components index.js
+
+# 5th step
+if have # 4
+according to new component of index.js create component
+
+B. vuex development proccess:
+# 1rt step
+vuex state.js
+
+# 2rt step
+vuex actions.js
+
+# 3rd step
+vuex mutation-type.js
+
+# 4th step
+vuex mutaions.js
+
+# 5th step
+vuex getters.js (compute attribute)
+
+```
 
 ## Build Setup
 
