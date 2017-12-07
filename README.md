@@ -13,6 +13,9 @@ npm install -g vue-cli
 # init project
 vue init reamd/vue-template your_project
 
+# cd project
+cd your_project
+
 # install dependencies
 npm install
 

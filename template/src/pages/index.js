@@ -1,8 +1,9 @@
 import Root from './Root'
-
-const Help = resolve => require(['./Help.vue'], resolve)
+import Help from './Help.vue'
+import Test from './Test.vue'
 
 export default {
     Root,
-    Help
+    Help,
+    Test
 }
